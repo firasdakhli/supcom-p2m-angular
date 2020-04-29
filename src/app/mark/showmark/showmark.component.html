@@ -1,0 +1,123 @@
+<body class="bg-light">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Show marks</h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Information</th>
+              <th>Details</th>
+              
+              <th>Presence</th>
+              
+              <th>Validation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngIf="form">
+              <th>Project Name</th>
+              <td>{{form.project_Name}}</td>
+              
+              <td></td>
+              
+              <td>  </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>Student Name</th>
+              <td>{{form.student_Name}}</td>
+              
+              <td></td>
+              
+              <td>  </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>President Name</th>
+              <td>{{form.president_Name}}</td>
+              
+              <td></td>
+              
+              <td> {{form.president_Validation}} </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>Member 1</th>
+              <td>{{form.jurry_Name_1}}</td>
+              <td> {{form. member_Presence_1}} </td>
+              <td>{{form.jurry_1_Validation}}</td>
+              
+             
+            </tr>
+            <tr *ngIf="form">
+              <th>Member 2</th>
+              <td>{{form.jurry_Name_2}}</td>
+              
+              <td>{{form. member_Presence_2}}</td>
+              
+              <td> {{form.jurry_2_Validation}} </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>Member 3</th>
+              <td>{{form.jurry_Name_3}}</td>
+             
+              <td>{{form. member_Presence_3}}</td>
+              
+              <td> {{form.jurry_3_Validation}} </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>Member 4</th>
+              <td>{{form.jurry_Name_4}}</td>
+             
+              <td>{{form.member_Presence_4}}</td>
+              
+              <td> {{form.jurry_4_Validation}} </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>Member 5</th>
+              <td>{{form.jurry_Name_5}}</td>
+             
+              <td>{{form. member_Presence_5}}</td>
+              
+              <td> {{form.jurry_5_Validation}} </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>Sup'Com Supervisor</th>
+              <td>{{form.supervisor_1}}</td>
+              
+              <td>{{form.supervisor_1_Presence}}</td>
+              
+              <td> {{form.supervisor_1_Validation}} </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>Sup'Com supervisor mark</th>
+              <td>{{form.supervisor_1_Mark}}</td>
+              <td></td>
+              
+              <td>  </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>Reviewer Name</th>
+              <td> {{form.reviewer_Name}}</td>
+             
+              <td>{{form. reviewer_Presence}}</td>
+              
+              <td> {{form.reviewer_Validation}} </td>
+            </tr>
+            <tr *ngIf="form">
+              <th>Reviewer Mark</th>
+              <td> {{form.reviewer_Mark}}</td>
+             
+              <td></td>
+              
+              <td> </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+
+  
+
+

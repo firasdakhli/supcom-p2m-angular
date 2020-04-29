@@ -1,0 +1,88 @@
+<h2>form Details</h2> 
+
+<hr/>
+<div *ngIf="form">
+  <div>
+    <label><b>project Name: </b></label> {{form.project_Name}}
+  </div>
+  <div>
+    <label><b>President Name: </b></label> {{form.president_Name +" "+form.president_SurName}} 
+  </div>
+  <div>
+   <label><b>President Email : </b></label> {{form.president_Email}}
+  </div>
+
+  <div>
+    <label><b> Member 1: </b></label> {{form.jurry_Name_1+" "+form.jurry_SurName_1}} 
+  </div>
+  <div>
+   <label><b>Member 1 Email: </b></label> {{form.jurry_Email_1}}
+  </div>
+
+  <div>
+    <label><b>Member 2: </b></label> {{form.jurry_Name_2+" "+form.jurry_SurName_2}}
+  </div>  
+  <div>
+    <label><b>Member 2 Email: </b></label> {{form.jurry_Email_2}}
+  </div>
+  <div>
+    <label><b>Member 3: </b></label> {{form.jurry_Name_3+" "+form.jurry_SurName_3}}
+  </div>
+  <div>
+    <label><b>Member 3 Email: </b></label> {{form.jurry_Email_3}}
+  </div>  
+  <div>
+    <label><b>Member 4: </b></label> {{form.jurry_Name_4+" "+form.jurry_SurName_4}}
+  </div>
+  <div>
+    <label><b>Member 4 Email: </b></label> {{form.jurry_Email_4}}
+  </div>
+  <div>
+    <label><b>Member 5: </b></label> {{form.jurry_Name_5+" "+form.jurry_SurName_5}}
+  </div>  
+  <div>
+    <label><b>Member 5 Email: </b></label> {{form.jurry_Email_5}}
+  </div>
+  <div>
+    <label><b>Student Name: </b></label> {{form.student_Name+" "+form.student_SurName}}
+  </div>
+  <div>
+    <label><b>Student Email: </b></label> {{form.student_Email}}
+  </div>  
+  <div>
+    <label><b>Supervisor 1: </b></label> {{form.supervisor_1+" "+form.supervisor_1_SurName}}
+  </div>
+  <div>
+    <label><b>Supervisor 1 Email: </b></label> {{form.supervisor_1_Email}}
+  </div>
+  <div>
+    <label><b>Supervisor 2: </b></label> {{form.supervisor_2+" "+form.supervisor_2_SurName}}
+  </div>  
+  <div>
+    <label><b>Supervisor 2 Email: </b></label> {{form.supervisor_2_Email}}
+  </div>
+  <div>
+    <label><b>Reviewer: </b></label> {{form.reviewer_Name+" "+form.reviewer_SurName}}
+  </div>  
+  <div>
+    <label><b>Reviewer Email: </b></label> {{form.reviewer_Email}}
+  </div>
+  <div>
+    <label><b>Intership: </b></label> {{form.intership}}
+  </div> 
+  <div>
+    <label><b>Class: </b></label> {{form.class_number}}
+  </div>  
+  <div>
+    <label><b>Date: </b></label> {{form.date}}
+  </div>
+  <div>
+    <label><b>Time: </b></label> {{form.time}}
+  </div> 
+
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Updating Form</button><br>

@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Checkout example · Bootstrap</title>
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<!
+<meta name="theme-color" content="#563d7c">
+
+
+
+    <!-- Custom styles for this template -->
+    <!--link href="form-validation.css" rel="stylesheet"-->
+  </head>
+  <body class="bg-light">
+    <div class="container">
+    <div class="py-5 text-center">
+    
+    <h2>updating the Form</h2>
+    
+   
+    <div [hidden]="submitted">
+        <form (ngSubmit)="onSubmit()">
+    <div class="row">
+  
+    <div class="col-md-12 order-md-1">
+      
+
+      <!--form class="needs-validation" novalidate-->
+        <div class="row">
+          <div class="col-md-6 offset-md-3 mb-3">
+            <label for="project_name">Project Name</label>
+            <input type="text" class="form-control" id="project_name"  [(ngModel)]="formulaire.project_Name" name="project_name" placeholder="proect name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="president_name">President</label>
+          </div>
+        </div>
+      
+          <div class="row">
+           <div class="col-md-4 mb-3">
+            <!--label for="president_name"></label-->
+            <input type="text" class="form-control" id="president_name"  [(ngModel)]="formulaire.president_SurName" name="president_surname" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="president_name"></label-->
+            <input type="text" class="form-control" id="president_name"  [(ngModel)]="formulaire.president_Name" name="president_name" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="president_email"> </label-->
+          <input type="email" class="form-control" id="president_email"  [(ngModel)]="formulaire.president_Email" name="president_email" placeholder="Email">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="president_name">Member 1</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_1">Jury 1 name</label-->
+            <input type="text" class="form-control" id="jurry_name_1"  [(ngModel)]="formulaire.jurry_SurName_1" name="jurry_surname_1" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_1">Jury 1 name</label-->
+            <input type="text" class="form-control" id="jurry_name_1"  [(ngModel)]="formulaire.jurry_Name_1" name="jurry_name_1" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_email_1">Email </label--> <input type="text" class="form-control" id="jurry_Email_1" [(ngModel)]="formulaire.jurry_Email_1" name="jurry_email_1"placeholder="Email">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="jurry_name_2">Member 2</label>
+          </div>
+        </div>
+
+
+
+      
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_2">Jury 2 name</label-->
+            <input type="text" class="form-control" id="jurry_name_2"  [(ngModel)]="formulaire.jurry_SurName_2" name="jurry_surname_2" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_2">Jury 2 name</label-->
+            <input type="text" class="form-control" id="jurry_name_2"  [(ngModel)]="formulaire.jurry_Name_2" name="jurry_name_2" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_email_2">Email </label-->
+          <input type="email" class="form-control" id="jurry_email_2"  [(ngModel)]="formulaire.jurry_Email_2" name="jurry_email_2" placeholder="Email">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="jurry_name_2">Member 3</label>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_3">Jury 3 name</label-->
+            <input type="text" class="form-control" id="jurry_name_3"  [(ngModel)]="formulaire.jurry_SurName_3" name="jurry_surname_3" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_3">Jury 3 name</label-->
+            <input type="text" class="form-control" id="jurry_name_3"  [(ngModel)]="formulaire.jurry_Name_3" name="jurry_name_3" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_email_3">Email </label-->
+          <input type="email" class="form-control" id="jurry_email_3"  [(ngModel)]="formulaire.jurry_Email_3" name="jurry_email_3" placeholder="Email">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="jurry_name_2">Member 4</label>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_4">Jury 4 name</label-->
+            <input type="text" class="form-control" id="jurry_name_4"  [(ngModel)]="formulaire.jurry_SurName_4" name="jurry_surname_4" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_4">Jury 4 name</label-->
+            <input type="text" class="form-control" id="jurry_name_4"  [(ngModel)]="formulaire.jurry_Name_4" name="jurry_name_4" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_email_4">Email </label-->
+          <input type="email" class="form-control" id="jurry_email_4"  [(ngModel)]="formulaire.jurry_Email_4" name="jurry_email_4" placeholder="Email">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="jurry_name_2">Member 5</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_5">Jury 5 name</label-->
+            <input type="text" class="form-control" id="jurry_surname_5"  [(ngModel)]="formulaire.jurry_SurName_5" name="jurry_surname_5" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_name_5">Jury 5 name</label-->
+            <input type="text" class="form-control" id="jurry_name_5"  [(ngModel)]="formulaire.jurry_Name_5" name="jurry_name_5" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="jurry_email_5">Email</label-->
+          <input type="email" class="form-control" id="jurry_email_5"  [(ngModel)]="formulaire.jurry_Email_5" name="jurry_email_5" placeholder="Email">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="jurry_name_2">Student</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <!--label for="student_name">student name</label-->
+            <input type="text" class="form-control" id="student_name"  [(ngModel)]="formulaire.student_SurName" name="student_surname" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="student_name">student name</label-->
+            <input type="text" class="form-control" id="student_name"  [(ngModel)]="formulaire.student_Name" name="student_name" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="student_email">Email </label-->
+          <input type="email" class="form-control" id="student_email"  [(ngModel)]="formulaire.student_Email" name="student_email" placeholder="Email">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+          </div>
+        </div>
+
+        
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="jurry_name_2">Sup'com Supervisor</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <!--label for="supervisor_1">sup'com supervisor </label-->
+            <input type="text" class="form-control" id="supervisor_1"  [(ngModel)]="formulaire.supervisor_1_SurName" name="supervisor_1_surname" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="supervisor_1">sup'com supervisor </label-->
+            <input type="text" class="form-control" id="supervisor_1"  [(ngModel)]="formulaire.supervisor_1" name="supervisor_1" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="spervisor_1_email">Email</label-->
+            <input type="email" class="form-control" id="supervisor_1_email"  [(ngModel)]="formulaire.supervisor_1_Email" name="supervisor_1_email" placeholder="Email" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="jurry_name_2">Company Supervisor</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <!--label for="supervisor_2">society supervisor</label-->
+            <input type="text" class="form-control" id="supervisor_2"  [(ngModel)]="formulaire.supervisor_2_SurName" name="supervisor_2_surname" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="supervisor_2">society supervisor</label-->
+            <input type="text" class="form-control" id="supervisor_2"  [(ngModel)]="formulaire.supervisor_2" name="supervisor_2" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="spervisor_2_email">Email</label-->
+            <input type="email" class="form-control" id="supervisor_2_email"  [(ngModel)]="formulaire.supervisor_2_Email" name="supervisor_2_email" placeholder="Email" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4 offset-md-4 mb-3">
+            <label for="jurry_name_2">Reviewer</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <!--label for="supervisor_2">reviewer</label-->
+            <input type="text" class="form-control" id="reviewer_surname"  [(ngModel)]="formulaire.reviewer_SurName" name="reviewer_surname" placeholder="SurName" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="supervisor_2">reviewer</label-->
+            <input type="text" class="form-control" id="reviewer_name"  [(ngModel)]="formulaire.reviewer_Name" name="reviewer_name" placeholder="Name" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <!--label for="spervisor_2_email">Email</label-->
+            <input type="email" class="form-control" id="reviewer_email"  [(ngModel)]="formulaire.reviewer_Email" name="reviewer_email" placeholder="Email" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+        </div>
+
+
+       
+
+
+        
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+             <label for="intership">intership</label>
+             <input type="intership" class="form-control" id="intership"  [(ngModel)]="formulaire.intership" name="intership" required >
+               
+            
+            </div>
+        
+            
+          <div class="col-md-6 mb-3">
+            <label for="class_number">class</label>
+            <input type="text" class="form-control" id="class_Number"  [(ngModel)]="formulaire.class_number" name="class_Number" placeholder="A...orB..." required>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="date">date</label>
+            <input type="date" class="form-control" id="date"  [(ngModel)]="formulaire.date" name="date" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="time">Time</label>
+          <input type="time" class="form-control" id="time"  [(ngModel)]="formulaire.time" name="time">
+          <div class="invalid-feedback">
+            Please enter a valid email address for shipping updates.
+          </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="row">
+          <div class="col-md-6 mb-3 offset-md-3">
+            
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+          </div>
+
+        </div>
+       
+     
+
+ 
+        
+      <!--/form-->
+    </div>
+    </div>
+  </form>
+</div></div> </div>
+
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2019-2020 Sup'Com</p>
+    
+    </footer>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+
+<body class="bg-light">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Members List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>identity</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of jurry | async">
+            <td>{{employee._id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.adresse}}</td>
+            <td>{{employee.password}}</td>
+            <td><button (click)="deleteEmployee(employee._id)" class="btn btn-danger">Delete</button>
+                <button (click)="updateEmployee(employee._id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <!--button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">Details</button-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+  <router-outlet></router-outlet>

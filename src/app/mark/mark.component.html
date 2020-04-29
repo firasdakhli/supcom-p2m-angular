@@ -1,0 +1,34 @@
+<body class="bg-light">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Show marks</h2>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>project name</th>
+                <th>student name</th>
+                
+                <th>president name</th>
+                
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of formulaire | async">
+                <td>{{employee.project_Name}}</td>
+                <td>{{employee.student_Name}}</td>
+                <td>{{employee.president_Name}}</td>
+                
+                <td><button (click)="deleteEmployee(employee._id)" class="btn btn-danger">Delete</button>
+                    <button (click)="employeeDetails(employee._id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </body>
+      <router-outlet></router-outlet>
+    
